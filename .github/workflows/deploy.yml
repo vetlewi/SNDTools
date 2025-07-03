@@ -48,7 +48,12 @@ jobs:
         with:
           name: cibw-dist
           path: dist/*
+      - name: Upload to PyPI
+        run: pipx run twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+        env:
+          TWINE_PASSWORD: ${{ secrets.TEST_PYPI_SECRET }}
   upload_pypi:
+    if: false
     needs: [build_sdist]
     runs-on: ubuntu-latest
     environment:
