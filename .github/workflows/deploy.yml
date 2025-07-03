@@ -55,6 +55,9 @@ jobs:
   upload_pypi:
     needs: [build_sdist]
     runs-on: ubuntu-latest
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/sndtools
     permissions:
       id-token: write
     if: github.event_name == 'release' && github.event.action == 'published'
@@ -66,4 +69,4 @@ jobs:
           merge-multiple: true
       - uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          repository-url: https://test.pypi.org
+          repository-url: https://test.pypi.org/legacy
