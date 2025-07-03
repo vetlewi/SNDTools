@@ -5,7 +5,7 @@ description = "Statistical Nuclear Data Tools"
 authors = [{name = "Vetle Wegner Ingeberg", email = "vetlewi@fys.uio.no"}]
 license = "MIT"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.13"
 dependencies = [
     "pydantic>=2",
     "PyYAML>=6"
