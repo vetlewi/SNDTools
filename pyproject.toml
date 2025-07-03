@@ -1,0 +1,18 @@
+[project]
+name = "sndtools"
+dynamic = ["version"]
+description = "Statistical Nuclear Data Tools"
+authors = [{name = "Vetle Wegner Ingeberg", email = "vetlewi@fys.uio.no"}]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pydantic>=2",
+    "PyYAML>=6"
+]
+
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
