@@ -3,7 +3,7 @@ name = "sndtools"
 dynamic = ["version"]
 description = "Statistical Nuclear Data Tools"
 authors = [{name = "Vetle Wegner Ingeberg", email = "vetlewi@fys.uio.no"}]
-license = { file = "LICENSE" }
+license = "MIT"
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
